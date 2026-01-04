@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "iteration": {
+    "current": 1,
+    "max": 30,
+    "currentStartedAt": "2026-01-04T21:59:26.354Z",
+    "history": []
+  },
+  "criteria": {
+    "mode": "all",
+    "requiredScore": 0.8,
+    "items": [
+      {
+        "id": "c0",
+        "type": "lint-clean",
+        "name": "Lint Clean",
+        "config": {
+          "cmd": "npm run lint"
+        }
+      },
+      {
+        "id": "c1",
+        "type": "command",
+        "name": "Build",
+        "config": {
+          "cmd": "npm run build"
+        }
+      }
+    ]
+  },
+  "budget": {
+    "maxDuration": null,
+    "maxTokens": null
+  },
+  "checkpoints": {
+    "auto": {
+      "enabled": true,
+      "interval": 10,
+      "keep": 3
+    },
+    "items": []
+  },
+  "stuckDetection": {
+    "enabled": true,
+    "sameOutputThreshold": 3,
+    "noProgressThreshold": 5,
+    "strategy": "retry-variation"
+  },
+  "qualityGates": [],
+  "metrics": {
+    "totalTokens": 0,
+    "estimatedCost": 0,
+    "totalDuration": 0,
+    "filesCreated": [],
+    "filesModified": []
+  },
+  "controlCenter": {
+    "enabled": true,
+    "url": "http://127.0.0.1:3344",
+    "projectId": "D:\\Codebox\\__NPM__\\TimeKit",
+    "taskId": "503c229d-aa6a-44dd-bf0f-8bb788bc3e8d"
+  },
+  "task": {
+    "id": "503c229d-aa6a-44dd-bf0f-8bb788bc3e8d",
+    "name": "website",
+    "prompt": "docs/WEBSITE.md dosyasına bak, bizim bu npm paketi için website klasöründe tanımlandığı gibi react bir site inşa et, ama sakın sallamasoyn iş apma kurallara uygun davran",
+    "startedAt": "2026-01-04T21:59:26.354Z",
+    "status": "running"
+  }
+}
