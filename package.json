@@ -8,14 +8,16 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "default": "./dist/index.js"
     },
     "./react": {
+      "types": "./dist/adapters/react/index.d.ts",
       "import": "./dist/adapters/react/index.js",
       "require": "./dist/adapters/react/index.cjs",
-      "types": "./dist/adapters/react/index.d.ts"
+      "default": "./dist/adapters/react/index.js"
     }
   },
   "files": [

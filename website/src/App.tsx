@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import Layout from './components/Layout'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import HomePage from './pages/HomePage'
-import ApiPage from './pages/ApiPage'
-import ExamplesPage from './pages/ExamplesPage'
-
-type Page = 'home' | 'api' | 'examples'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from '@/hooks/useTheme'
+import { Layout } from '@/components/layout/Layout'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+import { Home } from '@/pages/Home'
+import { API } from '@/pages/API'
+import { Examples } from '@/pages/Examples'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<Page>('home')
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <HomePage onPageChange={setCurrentPage} />
-      case 'api':
-        return <ApiPage />
-      case 'examples':
-        return <ExamplesPage />
-      default:
-        return <HomePage onPageChange={setCurrentPage} />
-    }
-  }
-
   return (
-    <Layout>
-      <Header currentPage={currentPage} onPageChange={setCurrentPage} />
-      <main>{renderPage()}</main>
-      <Footer />
-    </Layout>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Layout>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/api" element={<API />} />
+              <Route path="/examples" element={<Examples />} />
+            </Routes>
+          </main>
+          <Footer />
+        </Layout>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 

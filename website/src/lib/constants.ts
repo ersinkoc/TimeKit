@@ -1,0 +1,6 @@
+export const PACKAGE_NAME = '@oxog/timekit'
+export const GITHUB_REPO = 'ersinkoc/timekit'
+export const NPM_PACKAGE = '@oxog/timekit'
+export const VERSION = '0.0.1'
+export const DESCRIPTION = 'Lightweight date/time formatting and manipulation with timezone support'
+export const DOMAIN = 'timekit.oxog.dev'
